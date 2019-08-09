@@ -12,6 +12,6 @@ class WeibohotsearchCrawlerItem(Item):
     date = Field()  # 日期
     keyword = Field()  # 关键词
     url = Field()  # 地址
-    count = Field()  # 相关数
-    searchCount = Field()  # 搜索数
+    wbcount = Field()  # 相关微博数
+    searchcount = Field()  # 搜索数
     rank = Field()  # 排名

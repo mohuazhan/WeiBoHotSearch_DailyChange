@@ -2,10 +2,13 @@
 
 - [First.爬虫](/weibohotsearch_crawler/)
 
-## 实现步骤
+## 版本概览
 
-- 第一章.爬虫初步
-	- 1.1　Scrapy入门
-		- 1.1.1　利用Scrapy爬取微博热搜
-		- 1.1.2　数据以json文件保存
-		- 1.1.3　start_urls
+| 版本号 | 项目进度 |
+|-- |-- |
+| v1.0 | 利用Scrapy爬取微博热搜 |
+|  | 数据以json文件保存 |
+|  | start_urls未批量导入 |
+| v1.1 | 手动批量获得日期 |
+|  | 管道新增数据导入TDengine |
+

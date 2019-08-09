@@ -14,8 +14,18 @@ BOT_NAME = 'weibohotsearch_crawler'
 SPIDER_MODULES = ['weibohotsearch_crawler.spiders']
 NEWSPIDER_MODULE = 'weibohotsearch_crawler.spiders'
 
-FEED_URI = 'result.json'
+# 数据存储为json文件
+# FEED_URI = 'result.json'
+
+# 设置序列化格式为json
 FEED_FORMAT= 'json'
+
+# 配置数据导出到TDengine
+TDENGINE_HOST= '192.168.8.89'
+TDENGINE_USER= 'xiaomo'
+TDENGINE_PASSWORD= '19940809'
+TDENGINE_DATABASE= 'hotsearch'
+
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'weibohotsearch_crawler (+http://www.yourdomain.com)'
 
@@ -67,6 +77,7 @@ ROBOTSTXT_OBEY = True
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'weibohotsearch_crawler.pipelines.WeibohotsearchCrawlerPipeline': 300,
+    'weibohotsearch_crawler.pipelines.TDenginePipeline': 301,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
