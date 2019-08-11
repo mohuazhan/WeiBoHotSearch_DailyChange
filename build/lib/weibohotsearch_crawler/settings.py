@@ -77,7 +77,7 @@ ROBOTSTXT_OBEY = True
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'weibohotsearch_crawler.pipelines.WeibohotsearchCrawlerPipeline': 300,
-#     'weibohotsearch_crawler.pipelines.TDenginePipeline': 301,
+    'weibohotsearch_crawler.pipelines.TDenginePipeline': 301,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

@@ -1,6 +1,7 @@
 # 微博热搜爬虫 & 时序动态可视化
 
 - [First.爬虫](/weibohotsearch_crawler/)
+-.[Second.部署教程](/scrapyd_course.md)
 
 ## 版本概览
 
@@ -11,4 +12,5 @@
 |  | start_urls未批量导入 |
 | v1.1 | 手动批量获得日期 |
 |  | 管道新增数据导入TDengine |
+| v1.2 | 新增scrapyd简单部署 |
 
