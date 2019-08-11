@@ -1,7 +1,7 @@
 # 微博热搜爬虫 & 时序动态可视化
 
 - [First.爬虫](/weibohotsearch_crawler/)
--.[Second.部署教程](/scrapyd_course.md)
+- [Second.部署教程](/scrapyd_course.md)
 
 ## 版本概览
 
