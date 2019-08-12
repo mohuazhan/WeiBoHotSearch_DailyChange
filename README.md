@@ -1,5 +1,6 @@
 # 微博热搜爬虫 & 时序动态可视化
 
+- [Total.文件说明](/file_explain.md)
 - [First.爬虫](/weibohotsearch_crawler/)
 - [Second.部署教程](/scrapyd_course.md)
 
@@ -12,5 +13,7 @@
 |  | start_urls未批量导入 |
 | v1.1 | 手动批量获得日期 |
 |  | 管道新增数据导入TDengine |
-| v1.2 | 新增scrapyd简单部署 |
+| v1.2 | scrapyd简单部署 |
+| v1.3 | 搭建scrapyd爬虫服务器 |
+|  | 使用Nginx反向代理添加用户认证 |
 
