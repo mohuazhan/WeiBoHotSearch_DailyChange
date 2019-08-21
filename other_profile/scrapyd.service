@@ -5,7 +5,7 @@ Documentation=http://scrapyd.readthedocs.org/en/latest/api.html
 
 [Service]
 User=root
-ExecStart=/spiders/env_py2.7/bin/scrapyd --logfile /spiders/weibohotsearch_crawler/scrapyd.log
+ExecStart=/spiders/env_py2.7/bin/scrapyd --logfile /spiders/scrapyd_file/scrapyd.log
 
 [Install]
 WantedBy=multi-user.target

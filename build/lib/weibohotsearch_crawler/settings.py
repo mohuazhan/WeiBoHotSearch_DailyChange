@@ -15,16 +15,35 @@ SPIDER_MODULES = ['weibohotsearch_crawler.spiders']
 NEWSPIDER_MODULE = 'weibohotsearch_crawler.spiders'
 
 # 数据存储为json文件
-FEED_URI = 'result.json'
+# FEED_URI = 'result.json'
 
 # 设置序列化格式为json
-FEED_FORMAT= 'json'
+FEED_FORMAT = 'json'
 
 # 配置数据导出到TDengine
-TDENGINE_HOST= '192.168.1.89'
-TDENGINE_USER= 'xiaomo'
-TDENGINE_PASSWORD= '19940809'
-TDENGINE_DATABASE= 'hotsearch'
+TDENGINE_HOST = '192.168.1.89'
+TDENGINE_USER = 'xiaomo'
+TDENGINE_PASSWORD = '19940809'
+TDENGINE_DATABASE = 'hotsearch'
+
+# 配置数据导出到MongoDB
+MONGODB_SERVER = "192.168.1.89"
+MONGODB_PORT = 27017
+MONGODB_USER = 'xiaomo'
+MONGODB_PASSWORD = '19940809'
+MONGODB_DB = "hotsearch"
+MONGODB_COLLECTION = "weibo"
+
+# 配置数据导出到MySQL
+MYSQL_HOST = '192.168.1.89'
+MYSQL_PORT = 3306
+MYSQL_USER = 'xiaomo'
+MYSQL_PASSWORD = 'mhz$940809$'
+MYSQL_DB = "hotsearch"
+MYSQL_TABLE = "weibo"
+
+# 配置数据导出到Elasticsearch
+ES_URL = 'http://192.168.1.89:9200/hotsearch/weibo'
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = 'weibohotsearch_crawler (+http://www.yourdomain.com)'
@@ -77,7 +96,11 @@ ROBOTSTXT_OBEY = True
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
     'weibohotsearch_crawler.pipelines.WeibohotsearchCrawlerPipeline': 300,
-#     'weibohotsearch_crawler.pipelines.TDenginePipeline': 301,
+#     'weibohotsearch_crawler.pipelines.JsonFeedPipeline': 301,
+#     'weibohotsearch_crawler.pipelines.TDenginePipeline': 302,
+#     'weibohotsearch_crawler.pipelines.MongoDBPipeline': 303,
+#     'weibohotsearch_crawler.pipelines.MySQLPipeline': 304,
+    'weibohotsearch_crawler.pipelines.EsPipeline': 305,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)

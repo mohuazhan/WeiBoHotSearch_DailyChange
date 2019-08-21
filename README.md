@@ -12,8 +12,10 @@
 |  | 数据以json文件保存 |
 |  | start_urls未批量导入 |
 | v1.1 | 手动批量获得日期 |
-|  | 管道新增数据导入TDengine |
+|  | 新增TDengine数据管道 |
 | v1.2 | scrapyd简单部署 |
 | v1.3 | 搭建scrapyd爬虫服务器 |
 |  | 使用Nginx反向代理添加用户认证 |
-
+| v1.4 | 新增MongoDB数据管道 |
+|  | 新增MySQL数据管道 |
+|  | 新增Elasticsearch数据管道 |

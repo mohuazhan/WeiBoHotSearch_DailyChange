@@ -1,0 +1,7 @@
+# scrapyd produced
+dbs/.
+eggs/.
+logs/.
+twistd.pid
+
+node_modules/
