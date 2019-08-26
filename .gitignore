@@ -3,5 +3,7 @@ dbs/.
 eggs/.
 logs/.
 twistd.pid
+# 过滤所有.pyc文件
+*.pyc
 
 node_modules/

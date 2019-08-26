@@ -100,7 +100,7 @@ ITEM_PIPELINES = {
 #     'weibohotsearch_crawler.pipelines.TDenginePipeline': 302,
 #     'weibohotsearch_crawler.pipelines.MongoDBPipeline': 303,
 #     'weibohotsearch_crawler.pipelines.MySQLPipeline': 304,
-    'weibohotsearch_crawler.pipelines.EsPipeline': 305,
+#     'weibohotsearch_crawler.pipelines.EsPipeline': 305,
 }
 
 # Enable and configure the AutoThrottle extension (disabled by default)
