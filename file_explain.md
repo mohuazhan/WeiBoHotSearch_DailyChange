@@ -3,17 +3,34 @@
 - /：项目根目录
 	- scrapy.cfg：scrapy运行配置
 	- file_explain.md：文件说明
+	- log_dir.txt：日志位置说明
 	- scrapyd_course.md：scrapyd相关配置教程
+	- requirements.txt：python依赖包
 - /weibohotsearch_crawler：爬虫项目
 	- /spiders：爬取主代码
 - /crawl_common：爬虫加载项
 	- manual_getdate.py：手动获得日期
 	- user_agents.py：存放user_agent列表
 - /other_profile：其他配置文件
-	- scrapyd.service：systemd启动scrapyd配置
-	- scrapyd_nginx.conf：scrapyd的nginx配置
+	- scrapyd.service：systemd启动scrapyd配置（放在/lib/systemd/system下）
+	- scrapyd_nginx.conf：scrapyd的nginx配置（放在/etc/nginx/sites-enabled下）
 - scrapyd生成项目文件：
 	- /build
 	- /project.egg-info
 	- setup.py
 	- weibohotsearch.egg
+- /hotsearch_api：API项目文件夹
+	- /handlers：接口主程序文件夹
+	- /conf：配置文件夹
+		- hotsearch_nginx.conf：nginx配置文件（放在/etc/nginx/sites-enabled下）
+		- hotsearch_super.conf：supervisor配置文件
+	- /static：静态文件目录
+		- swagger-ui：swagger-ui页面文件
+		- v1：swagger-ui配置
+	- /tmp_logs：日志文件夹
+	- /：项目根目录
+		- consts.py：选择常数
+		- utils.py：公用程序
+		- routes.py：路由映射
+		- server.py：服务启动
+		- user_agents.list：user_agent列表

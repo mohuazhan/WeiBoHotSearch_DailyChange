@@ -1,0 +1,9 @@
+scrapy
+scrapyd
+git+ssh://git@github.com/scrapy/scrapyd-client.git
+pymongo
+MySQL-python
+treq
+tornado
+requests
+supervisor

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>动态排名数据可视化</title>
+</head>
+
+<body>
+    <form name="myForm">
+        <table align="center" border="1">
+            <caption>微博热搜动态可视化</caption>
+            <tr><td>开始日期：</td><td><input type="text" name="start_date"/></td></tr>
+            <tr><td>结束日期：</td><td><input type="text" name="end_date"/></td></tr>
+            <tr><td>验证Token：</td><td><input type="password" name="token"/></td></tr>
+            <tr><td colspan="2" style="text-align: center; padding: 5px;">
+                <input type="button" value="提交" onclick="submitForm()"/></td></tr>
+        </table>
+    </form>
+    <svg width="1440" height="900"></svg>
+    <script src="config.js"></script>
+    <script src="imgs.js"></script>
+    <script src="color_ranges.js"></script>
+    <script src="visual.js"></script>
+    <link rel="stylesheet" href="stylesheet.css">
+</body>
+
+</html>

@@ -65,9 +65,8 @@ class TDenginePipeline(object):  # 数据导出到TDengine
     def process_item(self, item, spider):
         # 批量写入
         try:
-            self.TDengine_cursor.execute("insert into weibo values (now, '%s', '%s', '%s', %d, %d, %d)" % (item['date'], item['keyword'], item['url'], item['wbcount'], item['searchcount'], item['rank']))
+            self.TDengine_cursor.execute("insert into weibo values ('%s', '%s', '%s', '%s', %d, %d, %d)" % (item['ts'], item['date'], item['keyword'], item['url'], item['wbcount'], item['searchcount'], item['rank']))
         except Exception as err:
-            self.TDengine_conn.close()
             raise(err)
         return item
 

@@ -2,7 +2,7 @@
 
 - [Total.文件说明](/file_explain.md)
 - [First.爬虫](/weibohotsearch_crawler/)
-- [Second.部署教程](/scrapyd_course.md)
+- [Second.部署教程](/project_course.md)
 
 ## 版本概览
 
@@ -19,3 +19,5 @@
 | v1.4 | 新增MongoDB数据管道 |
 |  | 新增MySQL数据管道 |
 |  | 新增Elasticsearch数据管道 |
+| v1.5 | 新增请求数据接口 |
+|  | 新增动态可视化文件 |

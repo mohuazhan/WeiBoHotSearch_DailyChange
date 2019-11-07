@@ -9,6 +9,7 @@ from scrapy.item import Item, Field
 
 
 class WeibohotsearchCrawlerItem(Item):
+    ts = Field()  # 精确到毫秒的时间(导入TDengine时所需)
     date = Field()  # 日期
     keyword = Field()  # 关键词
     url = Field()  # 地址

@@ -220,3 +220,32 @@ root@ubuntu:~# sudo systemctl restart scrapyd
 ```
 (env_py2.7) root@ubuntu:/spiders/weibohotsearch_crawler# curl -u xiaomo:19940809 http://192.168.1.89:6801/addversion.json -F project=weibohotsearch -F version=v1.1 -F egg=@weibohotsearch.egg
 ```
+加载运行指定的蜘蛛：
+```
+root@ubuntu:~# curl -u xiaomo:19940809 192.168.1.89:6801/schedule.json -d project=weibohotsearch -d spider=weibohotsearch
+```
+
+## Tornado API 部署
+
+/spiders/weibohotsearch_crawler/hotsearch_api/conf下分别是nginx和supervisord的配置文件，
+其中，hotsearch_nginx.conf须放在/etc/nginx/sites-enabled/下，hotsearch_super.conf则作为supervisord的启动文件
+运行supervisor服务，查看supervisor的状态：
+```
+root@ubuntu:~# supervisord -c /spiders/weibohotsearch_crawler/conf/hotsearch_super.conf
+root@ubuntu:~# supervisorctl -c /spiders/weibohotsearch_crawler/conf/hotsearch_super.conf status
+```
+在虚拟机的浏览器上访问 127.0.0.1:9001，输入账号密码，即可查看进程管理界面
+
+重启nginx：
+```
+root@ubuntu:~# /etc/init.d/nginx restart
+```
+或者：
+```
+root@ubuntu:~# systemctl restart nginx.service
+```
+即可对 192.168.1.89:8089/v1/spider/hotsearch/weibo 进行POST请求
+
+浏览器打开 http://192.168.1.89:8089/static/swagger-ui/index.html ，输入账号密码即可查看swagger-UI展示的API文档
+
+API文档保存在/spiders/tornado_api/static/v1下，可用json格式编写

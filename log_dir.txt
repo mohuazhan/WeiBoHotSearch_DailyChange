@@ -1,0 +1,19 @@
+# scrapyd
+/spiders/scrapyd_file/scrapyd.log
+/spiders/scrapyd_file/logs/weibohotsearch/weibohotsearch/
+
+# tornado:
+/spiders/weibohotsearch_crawler/tornado_api/tmp_logs/tornado.log
+
+# nginx:
+/var/log/nginx/access.log
+/var/log/nginx/error.log
+
+# supervisor:
+/tmp/supervisord.log
+
+# api server:
+/tmp/tornado_api_8000.log
+/tmp/tornado_api_8001.log
+/tmp/tornado_api_8002.log
+/tmp/tornado_api_8003.log
